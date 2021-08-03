@@ -1,10 +1,12 @@
 {
   "name": "leaderboard",
   "version": "1.0.0",
-  "description": "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+  "description": "project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack serve --open --config webpack.config.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,29 @@
   "bugs": {
     "url": "https://github.com/andersonlebon/leaderboard/issues"
   },
-  "homepage": "https://github.com/andersonlebon/leaderboard#readme"
+  "homepage": "https://github.com/andersonlebon/leaderboard#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "fontawesome": "^5.6.3",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
 }
