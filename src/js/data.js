@@ -18,3 +18,14 @@ const sendPostRequest = async (url, newData) => {
   });
   return response.json();
 };
+
+const getResponse = async (newUser) => {
+  const data = await sendPostRequest(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores',
+    newUser
+  );
+  const newData = await data;
+  return newData;
+};
+
+export default getResponse;
