@@ -8,6 +8,13 @@ export const display = (data) => {
   });
 };
 
+export const getScores = async () => {
+  const result = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores'
+  );
+  return result;
+};
+
 const sendPostRequest = async (url, newData) => {
   const response = await fetch(url, {
     method: 'POST',

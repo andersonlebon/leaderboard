@@ -1,5 +1,5 @@
 import '../sass/style.scss';
-import getResponse, { display } from './data';
+import getResponse, { display, getScores } from './data';
 
 const form = document.querySelector('form');
 const inputName = document.querySelector('.inputName');
@@ -11,12 +11,6 @@ refrech.addEventListener('click', async () => {
   const { result: data } = await result.json();
   display(data);
 });
-async function getScores() {
-  const result = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores'
-  );
-  return result;
-}
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
