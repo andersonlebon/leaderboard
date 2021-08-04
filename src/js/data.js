@@ -10,7 +10,7 @@ export const display = (data) => {
 
 export const getScores = async () => {
   const result = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores'
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bwkANb7WQHsP46ADhdAE/scores',
   );
   return result;
 };
@@ -28,8 +28,8 @@ const sendPostRequest = async (url, newData) => {
 
 const getResponse = async (newUser) => {
   const data = await sendPostRequest(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores',
-    newUser
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bwkANb7WQHsP46ADhdAE/scores',
+    newUser,
   );
   const newData = await data;
   return newData;
