@@ -3,7 +3,7 @@ export const display = (data) => {
   tableBody.innerHTML = '';
   data.forEach((player) => {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${player.playerName} : ${player.score}</td>`;
+    tr.innerHTML = `<td>${player.user} : ${player.score}</td>`;
     tableBody.appendChild(tr);
   });
 };
