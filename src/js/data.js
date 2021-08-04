@@ -1,11 +1,3 @@
-export const data = [
-  { playerName: 'player1', score: 18 },
-  { playerName: 'player2', score: 1 },
-  { playerName: 'player3', score: 18 },
-  { playerName: 'player4', score: 199 },
-  { playerName: 'player5', score: 18 },
-];
-
 export const display = (data) => {
   const tableBody = document.querySelector('.table-body');
   tableBody.innerHTML = '';
@@ -15,3 +7,25 @@ export const display = (data) => {
     tableBody.appendChild(tr);
   });
 };
+
+const sendPostRequest = async (url, newData) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newData),
+  });
+  return response.json();
+};
+
+const getResponse = async (newUser) => {
+  const data = await sendPostRequest(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores',
+    newUser
+  );
+  const newData = await data;
+  return newData;
+};
+
+export default getResponse;

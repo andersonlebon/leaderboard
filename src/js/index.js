@@ -1,18 +1,25 @@
 import '../sass/style.scss';
-import { display, data } from './data';
+import getResponse, { display } from './data';
 
 const form = document.querySelector('form');
 const inputName = document.querySelector('.inputName');
 const inputScore = document.querySelector('.inputScore');
+const refrech = document.querySelector('.refrech');
 
-display(data);
+refrech.addEventListener('click', async () => {
+  const result = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zaEndvNXcETRUSYvVVNr/scores'
+  );
+  const { result: data } = await result.json();
+  display(data);
+});
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const newPlayer = {
-    playerName: inputName.value,
+    user: inputName.value,
     score: inputScore.value,
   };
-  data.push(newPlayer);
-  display(data);
+  const message = await getResponse(newPlayer);
+  console.log(message);
 });
