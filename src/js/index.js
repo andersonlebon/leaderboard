@@ -20,4 +20,6 @@ form.addEventListener('submit', async (e) => {
     user: inputName.value,
     score: inputScore.value,
   };
+  const message = await getResponse(newPlayer);
+  console.log(message);
 });
