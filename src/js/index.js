@@ -21,3 +21,9 @@ form.addEventListener('submit', async (e) => {
   const message = await getResponse(newPlayer);
   console.log(message);
 });
+
+window.onload = async () => {
+  const result = await getScores();
+  const { result: data } = await result.json();
+  display(data);
+};
