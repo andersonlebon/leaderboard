@@ -8,4 +8,13 @@ export const display = (data) => {
   });
 };
 
-export default display();
+const sendPostRequest = async (url, newData) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newData),
+  });
+  return response.json();
+};
