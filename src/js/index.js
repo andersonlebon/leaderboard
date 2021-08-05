@@ -35,8 +35,6 @@ function pages(pages, paginationUl) {
     if (current == paginationLi.id) {
       paginationLi.classList.add('bg-primary');
       paginationLi.classList.add('p-active');
-    } else {
-      paginationLi.classList.remove('p-active');
     }
     // eslint-disable-next-line no-loop-func
     paginationLi.addEventListener('click', async () => {
