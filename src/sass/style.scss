@@ -1,5 +1,13 @@
-@import 'bootstrap';
+// @import 'bootstrap';
 
-.title h2 span {
-  font-size: 20px;
+.title .refrech {
+  font-size: 16px;
+  padding: 0.6rem 0.8rem;
+  line-height: 10px;
+  height: 100%;
+  color: #fff;
+}
+
+.table {
+  box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
 }

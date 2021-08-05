@@ -7,7 +7,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./sass/style.css" />
     <title>Leaderboard</title>
   </head>
   <body>
@@ -18,16 +24,20 @@
         <div class="container d-flex w-100 p-0">
           <div class="table-container w-50">
             <div class="title mb-3">
-              <h2 class="w-100 d-flex justify-content-between">
-                Recent score
-                <span class="badge refrech pt-2 badge-primary">Refresh</span>
-              </h2>
+              <div
+                class="w-100 d-flex align-items-center justify-content-between"
+              >
+                <h2>Recent score</h2>
+                <span class="badge refrech bg-primary"
+                  >Refresh <i class="fa fa-refresh" aria-hidden="true"> </i
+                ></span>
+              </div>
             </div>
             <table class="table table-striped border">
               <tbody class="table-body"></tbody>
             </table>
           </div>
-          <form class="ml-3 d-flex flex-column">
+          <form class="ml-4 d-flex flex-column">
             <h2 class="mb-3">Add your score</h2>
             <input
               type="text"
