@@ -25,15 +25,19 @@ function pages(pages, paginationUl) {
     paginationLi.className =
       'p-item rounded-circle text-center d-flex justify-content-center';
     paginationLi.id = i;
-    if (current === paginationLi.id) {
+    if (current == paginationLi.id) {
       paginationLi.classList.add('bg-primary');
       paginationLi.classList.add('p-active');
     } else {
-      paginationLi.classList.remove('active');
+      paginationLi.classList.remove('p-active');
     }
     // eslint-disable-next-line no-loop-func
-    paginationLi.addEventListener('click', () => {
+    paginationLi.addEventListener('click', async () => {
       current = paginationLi.id;
+      const result = await getScores();
+      const { result: data } = await result.json();
+      const paginatedItems = paginate(current, 4, data);
+      display(paginatedItems);
     });
     paginationLi.innerHTML = `<a class='p-link' href='#'>${i}
     </a>`;
@@ -83,9 +87,18 @@ form.addEventListener('submit', async (e) => {
   getResponse(newPlayer);
 });
 
+function paginate(currentPage = 1, rows, array) {
+  currentPage -= 1;
+  const loopStart = rows * currentPage;
+  const paginatedItems = array.slice(loopStart, loopStart + rows);
+  return paginatedItems;
+}
+
 window.onload = async () => {
   const result = await getScores();
   const { result: data } = await result.json();
-  display(data);
+  const paginatedItems = paginate(1, 4, data);
+
+  display(paginatedItems);
   pages(6, paginationUl);
 };
