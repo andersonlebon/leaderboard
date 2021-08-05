@@ -10,8 +10,7 @@ const refrech = document.querySelector('.refrech');
 refrech.addEventListener('click', async () => {
   const result = await getScores();
   const { result: data } = await result.json();
-  const paginatedItems = paginate(1, 4, data);
-  display(paginatedItems);
+  display(data);
 });
 
 form.addEventListener('submit', async (e) => {
@@ -26,6 +25,5 @@ form.addEventListener('submit', async (e) => {
 window.onload = async () => {
   const result = await getScores();
   const { result: data } = await result.json();
-
   display(data);
 };

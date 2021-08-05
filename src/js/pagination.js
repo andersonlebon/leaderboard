@@ -6,16 +6,17 @@ let current = 1;
 export const display = async (data) => {
   const tableBody = document.querySelector('.table-body');
   const paginationUl = document.querySelector('.pagination');
-  const paginatedItems = paginate(current, 4, data);
+  const paginatedItems = paginate(current, 5, data);
 
   tableBody.innerHTML = '';
   paginatedItems.forEach((player) => {
     const tr = document.createElement('tr');
+    tr.className = 'tr-row';
     tr.innerHTML = `<td>${player.user} : ${player.score}</td>`;
     tableBody.appendChild(tr);
   });
 
-  const paginationSize = Math.ceil(data.length / 4);
+  const paginationSize = Math.ceil(data.length / 5);
   pages(paginationSize, paginationUl);
 };
 
