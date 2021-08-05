@@ -1,13 +1,3 @@
-export const display = (data) => {
-  const tableBody = document.querySelector('.table-body');
-  tableBody.innerHTML = '';
-  data.forEach((player) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${player.user} : ${player.score}</td>`;
-    tableBody.appendChild(tr);
-  });
-};
-
 const API =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bwkANb7WQHsP46ADhdAE/scores';
 
