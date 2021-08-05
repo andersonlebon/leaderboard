@@ -2,7 +2,7 @@ main {
   padding: 100px 0;
 }
 
-main .title .refrech {
+main section .title .refrech {
   font-size: 16px;
   padding: 0.6rem 0.8rem;
   line-height: 10px;
@@ -10,7 +10,7 @@ main .title .refrech {
   color: #fff;
 }
 
-main .table {
+main section .table {
   -webkit-box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
           box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
 }
