@@ -2,21 +2,24 @@
 
 body {
   background: rgb(49, 71, 250);
-  background: radial-gradient(
-    circle,
-    rgba(49, 71, 250, 0.6208684157256652) 0%,
-    rgba(49, 71, 250, 0.41358550256039917) 50%
-  );
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 71, 250, 0.6208684157256652) 0%,
+      rgba(49, 71, 250, 0.41358550256039917) 50%
+    );
 }
+
 main {
   padding: 80px 0;
   transform: scale(0.8);
+
   section {
     box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
     border-radius: 5px;
     padding: 50px;
-
     position: relative;
+
     .leader {
       position: absolute;
       top: -26px;
@@ -75,28 +78,34 @@ input {
   &::placeholder {
     color: rgba(236, 236, 236, 0.801) !important;
   }
+
   color: #fff !important;
   background: rgba(49, 72, 250, 0.479) !important;
-  background: radial-gradient(
-    circle,
-    rgba(49, 72, 250, 0.103) 0%,
-    rgba(49, 72, 250, 0.062) 50%
-  ) !important;
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 72, 250, 0.103) 0%,
+      rgba(49, 72, 250, 0.062) 50%
+    ) !important;
 }
 
 @media only screen and (max-width: 995px) {
   main {
     padding: 20px 0;
     transform: scale(0.87) !important;
+
     .title {
       margin: 0;
+
       .refrech {
         font-size: 13px;
         padding: 0.45rem 0.65rem;
       }
     }
+
     section {
       padding: 30px 20px;
+
       .leader {
         font-size: 1.3rem;
         position: absolute;
@@ -105,17 +114,18 @@ input {
       }
     }
   }
+
   .main-container {
     flex-direction: column !important;
-    .refrech {
-      font-size: 10px;
-    }
+
     div {
       width: 100% !important;
     }
+
     form {
       padding: 0 !important;
     }
+
     h2 {
       font-size: 1.4rem;
       text-align: center;
