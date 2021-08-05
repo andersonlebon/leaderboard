@@ -1,6 +1,6 @@
 import '../sass/style.scss';
-import getResponse, { getScores } from './data';
-import paginate, { display } from './pagination';
+import sendPostRequest, { getScores } from './data';
+import { display } from './pagination';
 
 const form = document.querySelector('form');
 const inputName = document.querySelector('.inputName');
@@ -19,7 +19,7 @@ form.addEventListener('submit', async (e) => {
     user: inputName.value,
     score: inputScore.value,
   };
-  getResponse(newPlayer);
+  sendPostRequest(newPlayer);
 });
 
 window.onload = async () => {
