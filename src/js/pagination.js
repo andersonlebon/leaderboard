@@ -23,7 +23,8 @@ export function pages(pages, paginationUl) {
   paginationUl.innerHTML = '';
   for (let i = 1; i <= pages; i += 1) {
     const paginationLi = document.createElement('li');
-    paginationLi.className = 'p-item rounded-circle text-center d-flex justify-content-center';
+    paginationLi.className =
+      'p-item rounded-circle text-center d-flex justify-content-center';
     paginationLi.id = i;
     // eslint-disable-next-line eqeqeq
     if (current == paginationLi.id) {
@@ -37,8 +38,7 @@ export function pages(pages, paginationUl) {
       const { result: data } = await result.json();
       display(data);
     });
-    paginationLi.innerHTML = `<a class='p-link' href='#'>${i}
-    </a>`;
+    paginationLi.innerHTML = `${i}`;
     paginationUl.appendChild(paginationLi);
   }
 }

@@ -1,4 +1,13 @@
 // @import 'bootstrap';
+
+body {
+  background: rgb(49, 71, 250);
+  background: radial-gradient(
+    circle,
+    rgba(49, 71, 250, 0.6208684157256652) 0%,
+    rgba(49, 71, 250, 0.41358550256039917) 50%
+  );
+}
 main {
   padding: 80px 0;
 
@@ -17,26 +26,28 @@ main {
   }
 }
 
-.p-item {
-  width: 45px;
-  height: 45px;
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #8f8f8f;
-}
-
 .p-link {
   padding: 0;
   margin: 0;
 }
 
-.p-item:hover {
-  background-color: #c9c8c888;
-  transition: all 0.2s ease;
+.p-item {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  margin: 4px;
+  border: 1px solid #013d976b;
+  font-size: 12px;
+
+  &:hover {
+    background-color: #c9c8c888;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
 }
 
 .p-active {
   transform: scale(1.2);
-  color: rgba(255, 255, 255, 0.712);
-  border: 1px solid black;
+  color: rgb(255, 255, 255);
+  border: 1px solid #013d976b;
 }
