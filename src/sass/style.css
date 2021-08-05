@@ -13,6 +13,7 @@ main section {
   -webkit-box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
           box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
   border-radius: 5px;
+  padding: 50px;
   position: relative;
 }
 
@@ -96,11 +97,45 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 995px) {
+  main {
+    padding: 20px 0;
+    -webkit-transform: scale(0.87) !important;
+            transform: scale(0.87) !important;
+  }
+  main .title {
+    margin: 0;
+  }
+  main .title .refrech {
+    font-size: 13px;
+    padding: 0.45rem 0.65rem;
+  }
+  main section {
+    padding: 30px 20px;
+  }
+  main section .leader {
+    font-size: 1.3rem;
+    position: absolute;
+    left: 17%;
+    top: -15px;
+  }
   .main-container {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+  }
+  .main-container .refrech {
+    font-size: 10px;
+  }
+  .main-container div {
+    width: 100% !important;
+  }
+  .main-container form {
+    padding: 0 !important;
+  }
+  .main-container h2 {
+    font-size: 1.4rem;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
