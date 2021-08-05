@@ -16,6 +16,31 @@ const display = (data) => {
   });
 };
 
+const paginationUl = document.querySelector('.pagination');
+let current = 1;
+function pages(pages, paginationUl) {
+  paginationUl.innerHTML = '';
+  for (let i = 1; i <= pages; i += 1) {
+    const paginationLi = document.createElement('li');
+    paginationLi.className =
+      'p-item rounded-circle text-center d-flex justify-content-center';
+    paginationLi.id = i;
+    if (current === paginationLi.id) {
+      paginationLi.classList.add('bg-primary');
+      paginationLi.classList.add('p-active');
+    } else {
+      paginationLi.classList.remove('active');
+    }
+    // eslint-disable-next-line no-loop-func
+    paginationLi.addEventListener('click', () => {
+      current = paginationLi.id;
+    });
+    paginationLi.innerHTML = `<a class='p-link' href='#'>${i}
+    </a>`;
+    paginationUl.appendChild(paginationLi);
+  }
+}
+
 // form data
 const API =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bwkANb7WQHsP46ADhdAE/scores';
@@ -62,4 +87,5 @@ window.onload = async () => {
   const result = await getScores();
   const { result: data } = await result.json();
   display(data);
+  pages(6, paginationUl);
 };

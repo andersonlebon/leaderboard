@@ -1,5 +1,5 @@
 main {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 main section .title .refrech {
@@ -13,5 +13,31 @@ main section .title .refrech {
 main section .table {
   -webkit-box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
           box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
+}
+
+.p-item {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #8f8f8f;
+}
+
+.p-link {
+  padding: 0;
+  margin: 0;
+}
+
+.p-item:hover {
+  background-color: #c9c8c888;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.p-active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: rgba(255, 255, 255, 0.712);
+  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
