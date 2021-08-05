@@ -6,17 +6,24 @@ const inputName = document.querySelector('.inputName');
 const inputScore = document.querySelector('.inputScore');
 const refrech = document.querySelector('.refrech');
 
-const display = (data) => {
+const display = async (data) => {
   const tableBody = document.querySelector('.table-body');
+  const paginationUl = document.querySelector('.pagination');
+
   tableBody.innerHTML = '';
   data.forEach((player) => {
     const tr = document.createElement('tr');
     tr.innerHTML = `<td>${player.user} : ${player.score}</td>`;
     tableBody.appendChild(tr);
   });
+  const result = await getScores();
+  const { result: dataP } = await result.json();
+  const paginationSize = Math.ceil(dataP.length / 4);
+
+  console.log(dataP.length);
+  pages(paginationSize, paginationUl);
 };
 
-const paginationUl = document.querySelector('.pagination');
 let current = 1;
 function pages(pages, paginationUl) {
   paginationUl.innerHTML = '';
@@ -75,7 +82,8 @@ const getResponse = async (newUser) => {
 refrech.addEventListener('click', async () => {
   const result = await getScores();
   const { result: data } = await result.json();
-  display(data);
+  const paginatedItems = paginate(1, 4, data);
+  display(paginatedItems);
 });
 
 form.addEventListener('submit', async (e) => {
@@ -97,8 +105,7 @@ function paginate(currentPage = 1, rows, array) {
 window.onload = async () => {
   const result = await getScores();
   const { result: data } = await result.json();
-  const paginatedItems = paginate(1, 4, data);
 
+  const paginatedItems = paginate(1, 4, data);
   display(paginatedItems);
-  pages(6, paginationUl);
 };
