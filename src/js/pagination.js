@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import { getScores } from './data';
 
 let current = 1;
@@ -24,6 +25,7 @@ export function pages(pages, paginationUl) {
     const paginationLi = document.createElement('li');
     paginationLi.className = 'p-item rounded-circle text-center d-flex justify-content-center';
     paginationLi.id = i;
+    // eslint-disable-next-line eqeqeq
     if (current == paginationLi.id) {
       paginationLi.classList.add('bg-primary');
       paginationLi.classList.add('p-active');
