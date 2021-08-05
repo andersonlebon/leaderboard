@@ -10,7 +10,7 @@ body {
 }
 main {
   padding: 80px 0;
-
+  transform: scale(0.8);
   section {
     box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
     border-radius: 5px;
@@ -81,4 +81,10 @@ input {
     rgba(49, 72, 250, 0.103) 0%,
     rgba(49, 72, 250, 0.062) 50%
   ) !important;
+}
+
+@media only screen and (max-width: 995px) {
+  .main-container {
+    flex-direction: column !important;
+  }
 }

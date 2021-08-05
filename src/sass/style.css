@@ -5,6 +5,8 @@ body {
 
 main {
   padding: 80px 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 main section {
@@ -91,5 +93,14 @@ input::-ms-input-placeholder {
 
 input::placeholder {
   color: rgba(236, 236, 236, 0.801) !important;
+}
+
+@media only screen and (max-width: 995px) {
+  .main-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
