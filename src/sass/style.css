@@ -1,4 +1,8 @@
-.title .refrech {
+main {
+  padding: 100px 0;
+}
+
+main .title .refrech {
   font-size: 16px;
   padding: 0.6rem 0.8rem;
   line-height: 10px;
@@ -6,7 +10,7 @@
   color: #fff;
 }
 
-.table {
+main .table {
   -webkit-box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
           box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
 }
