@@ -22,7 +22,6 @@ form.addEventListener('submit', async (e) => {
     };
     const response = await sendPostRequest(newPlayer);
     const { result } = await response;
-    console.log(result);
     const success = document.querySelector('.success');
 
     success.innerHTML = result
