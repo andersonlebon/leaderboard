@@ -34,8 +34,8 @@ form.addEventListener('submit', async (e) => {
     inputName.value = '';
   } catch (error) {
     const success = document.querySelector('.success');
-    success.innerHTML = `<i class="fa fa-check-circle-o"></i>
-                ${error}`;
+    success.innerHTML = `<span class="text-danger"> <i class="fa fa-times-circle"></i> 
+        ${error}</span>`;
   }
 });
 
