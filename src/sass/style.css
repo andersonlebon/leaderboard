@@ -49,7 +49,20 @@ main section .table {
 
 .user-icon {
   color: blue;
-  margin-right: 20px;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.submit {
+  position: relative;
+}
+
+.submit .success {
+  position: absolute;
+  top: 7px;
+  right: 103%;
+  color: green;
+  font-style: italic;
 }
 
 .p-link {

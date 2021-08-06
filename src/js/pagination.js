@@ -12,7 +12,7 @@ export const display = async (data) => {
   paginatedItems.forEach((player) => {
     const tr = document.createElement('tr');
     tr.className = 'tr-row';
-    tr.innerHTML = `<td> <span class="user-icon"><i class="fa fa-user-circle"></i></span>${player.user} : ${player.score}</td>`;
+    tr.innerHTML = `<td class="d-flex align-items-center"> <span class="user-icon"><i class="fa fa-user-circle"></i></span>${player.user} : ${player.score}</td>`;
     tableBody.appendChild(tr);
   });
 

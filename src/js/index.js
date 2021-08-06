@@ -14,12 +14,29 @@ refrech.addEventListener('click', async () => {
 });
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const newPlayer = {
-    user: inputName.value,
-    score: inputScore.value,
-  };
-  sendPostRequest(newPlayer);
+  try {
+    e.preventDefault();
+    const newPlayer = {
+      user: inputName.value,
+      score: inputScore.value,
+    };
+    const response = await sendPostRequest(newPlayer);
+    const { result } = await response;
+    console.log(result);
+    const success = document.querySelector('.success');
+
+    success.innerHTML = result
+      ? `<i class="fa fa-check-circle-o"></i>  ${result}`
+      : `<span class="text-danger"> <i class="fa fa-times-circle"></i> 
+        Error incorrect user</span>`;
+
+    inputScore.value = '';
+    inputName.value = '';
+  } catch (error) {
+    const success = document.querySelector('.success');
+    success.innerHTML = `<i class="fa fa-check-circle-o"></i>
+                ${error}`;
+  }
 });
 
 window.onload = async () => {
