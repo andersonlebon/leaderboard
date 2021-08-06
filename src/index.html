@@ -11,24 +11,48 @@
     <title>Leaderboard</title>
   </head>
   <body>
-    <main class="container">
-      <section class="container p-5 m-5">
-        <h1 class="font-weight-bold">LEADERBOARD</h1>
+    <main class="container d-flex flex-column justify-content-center">
+      <section class="container">
+        <h1 class="leader font-weight-bold px-2">LEADERBOARD</h1>
 
-        <div class="container d-flex w-100 p-0">
+        <div
+          class="
+            container
+            main-container
+            justify-content-around
+            d-flex
+            w-100
+            p-0
+          "
+        >
           <div class="table-container w-50">
             <div class="title mb-3">
-              <h2 class="w-100 d-flex justify-content-between">
-                Recent score
-                <span class="badge refrech pt-2 badge-primary">Refresh</span>
-              </h2>
+              <div
+                class="w-100 d-flex align-items-center justify-content-between"
+              >
+                <h2 class="font-weight-bold">Recent score</h2>
+                <span class="badge refrech bg-primary"
+                  >Refresh <i class="fa fa-refresh" aria-hidden="true"> </i
+                ></span>
+              </div>
             </div>
             <table class="table table-striped border">
               <tbody class="table-body"></tbody>
             </table>
+            <ul class="pagination w-100 d-flex justify-content-center flex-row">
+              <li
+                class="
+                  p-item
+                  rounded-circle
+                  text-center
+                  d-flex
+                  justify-content-center
+                "
+              ></li>
+            </ul>
           </div>
-          <form class="ml-3 d-flex flex-column">
-            <h2 class="mb-3">Add your score</h2>
+          <form class="px-5 d-flex flex-column">
+            <h2 class="mb-3 font-weight-bold">Add your score</h2>
             <input
               type="text"
               class="inputName form-control m-2 mr-0"
@@ -41,14 +65,15 @@
             />
             <button
               type="submit"
-              class="btn btn-primary align-self-end mt-5 mr-0"
+              class="btn submit btn-primary align-self-end mt-3 mr-0"
             >
+              <span class="success font-weight-bold"> </span>
               Submit
             </button>
           </form>
         </div>
       </section>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="../dist/index.js"></script>
   </body>
 </html>
