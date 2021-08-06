@@ -1,12 +1,12 @@
 // @import 'bootstrap';
 
 body {
-  background: rgb(49, 71, 250);
-  background: radial-gradient(
-    circle,
-    rgba(49, 71, 250, 0.6208684157256652) 0%,
-    rgba(49, 71, 250, 0.41358550256039917) 50%
-  );
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 71, 250, 0.6208684157256652) 0%,
+      rgba(49, 71, 250, 0.41358550256039917) 50%
+    );
 }
 
 main {
@@ -85,12 +85,12 @@ input {
   }
 
   color: #fff !important;
-  background: rgba(49, 72, 250, 0.479) !important;
-  background: radial-gradient(
-    circle,
-    rgba(49, 72, 250, 0.103) 0%,
-    rgba(49, 72, 250, 0.062) 50%
-  ) !important;
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 72, 250, 0.103) 0%,
+      rgba(49, 72, 250, 0.062) 50%
+    ) !important;
 }
 
 @media only screen and (max-width: 995px) {
