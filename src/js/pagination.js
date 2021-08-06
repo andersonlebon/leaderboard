@@ -12,7 +12,7 @@ export const display = async (data) => {
   paginatedItems.forEach((player) => {
     const tr = document.createElement('tr');
     tr.className = 'tr-row';
-    tr.innerHTML = `<td>${player.user} : ${player.score}</td>`;
+    tr.innerHTML = `<td> <span class="user-icon"><i class="fa fa-user-circle"></i></span>${player.user} : ${player.score}</td>`;
     tableBody.appendChild(tr);
   });
 
@@ -24,7 +24,8 @@ export function pages(pages, paginationUl) {
   paginationUl.innerHTML = '';
   for (let i = 1; i <= pages; i += 1) {
     const paginationLi = document.createElement('li');
-    paginationLi.className = 'p-item rounded-circle text-center d-flex justify-content-center';
+    paginationLi.className =
+      'p-item rounded-circle text-center d-flex justify-content-center';
     paginationLi.id = i;
     // eslint-disable-next-line eqeqeq
     if (current == paginationLi.id) {
