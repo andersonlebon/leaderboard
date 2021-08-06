@@ -20,11 +20,12 @@ export const display = async (data) => {
   pages(paginationSize, paginationUl);
 };
 
-export function pages(pages, paginationUl) {
+export const pages = (pages, paginationUl) => {
   paginationUl.innerHTML = '';
   for (let i = 1; i <= pages; i += 1) {
     const paginationLi = document.createElement('li');
-    paginationLi.className = 'p-item rounded-circle text-center d-flex justify-content-center';
+    paginationLi.className =
+      'p-item rounded-circle text-center d-flex justify-content-center';
     paginationLi.id = i;
     // eslint-disable-next-line eqeqeq
     if (current == paginationLi.id) {
@@ -41,13 +42,13 @@ export function pages(pages, paginationUl) {
     paginationLi.innerHTML = `${i}`;
     paginationUl.appendChild(paginationLi);
   }
-}
+};
 
-function paginate(currentPage = 1, rows, array) {
+const paginate = (currentPage = 1, rows, array) => {
   currentPage -= 1;
   const loopStart = rows * currentPage;
   const paginatedItems = array.slice(loopStart, loopStart + rows);
   return paginatedItems;
-}
+};
 
 export default paginate;
