@@ -12,6 +12,7 @@ This project is build with:
 
 - HTML;
 - CSS;
+- Bootstrap, and
 - JavaScript.
 
 ## Live Demo
