@@ -2,9 +2,9 @@
 
 ---
 
-|     |         Desktop version                                   |                                Mobile version                                      |  |
-| --- | --------------------------------------------------------|------------------------------------------------------------------------------------- | -- |
-|     |  ![127 0 0 1_5500_dist_index html (2)](https://user-images.githubusercontent.com/65068771/128495532-0729086c-840b-4b83-9650-0872657f3d8d.png) |    ![127 0 0 1_5500_dist_index html(iPhone 5_SE)](https://user-images.githubusercontent.com/65068771/128495581-6b38656e-30ff-4c2d-a7c7-a1161626d74f.png) | |
+ Desktop version | Mobile version
+ ----------------| --------------
+  ![127 0 0 1_5500_dist_index html (2)](https://user-images.githubusercontent.com/65068771/128495532-0729086c-840b-4b83-9650-0872657f3d8d.png) |   ![127 0 0 1_5500_dist_index html(iPhone 5_SE)](https://user-images.githubusercontent.com/65068771/128495581-6b38656e-30ff-4c2d-a7c7-a1161626d74f.png)
 
 ## Built With
 
