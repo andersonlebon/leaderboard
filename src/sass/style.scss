@@ -1,0 +1,157 @@
+@import 'bootstrap';
+
+body {
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 71, 250, 0.6208684157256652) 0%,
+      rgba(49, 71, 250, 0.41358550256039917) 50%
+    );
+}
+
+main {
+  padding: 80px 0;
+  transform: scale(0.8);
+
+  section {
+    box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
+    border-radius: 5px;
+    padding: 50px;
+    position: relative;
+
+    .leader {
+      position: absolute;
+      margin: 0 auto;
+      top: -26px;
+      left: 33%;
+      background: #a2abf0;
+      box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
+      border-radius: 5px;
+    }
+
+    .title .refrech {
+      font-size: 16px;
+      padding: 0.6rem 0.8rem;
+      line-height: 10px;
+      height: 100%;
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.009);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .table {
+      box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.486);
+    }
+  }
+}
+
+.user-icon {
+  color: blue;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.submit {
+  position: relative;
+
+  .success {
+    position: absolute;
+    top: 7px;
+    right: 120%;
+    color: green;
+    font-style: italic;
+  }
+}
+
+.p-link {
+  padding: 0;
+  margin: 0;
+}
+
+.p-item {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  margin: 3px;
+  border: 1px solid #013d976b;
+  font-size: 12px;
+  box-shadow: 1px 1px 6px 1px rgba(6, 48, 163, 0.199);
+
+  &:hover {
+    background-color: #c9c8c888;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+}
+
+.p-active {
+  transform: scale(1.2);
+  color: rgb(255, 255, 255);
+  border: 1px solid #013d976b;
+}
+
+.tr-row {
+  padding: 0.45rem 0.75rem !important;
+}
+
+input {
+  &::placeholder {
+    color: rgba(236, 236, 236, 0.801) !important;
+  }
+
+  color: #fff !important;
+  background:
+    radial-gradient(
+      circle,
+      rgba(49, 72, 250, 0.103) 0%,
+      rgba(49, 72, 250, 0.062) 50%
+    ) !important;
+}
+
+@media only screen and (max-width: 995px) {
+  main {
+    padding: 20px 0;
+    transform: scale(0.87) !important;
+
+    .title {
+      margin: 0;
+
+      .refrech {
+        font-size: 13px;
+        padding: 0.45rem 0.65rem;
+      }
+    }
+
+    section {
+      padding: 30px 20px;
+
+      .leader {
+        font-size: 1.3rem;
+        position: absolute;
+        left: 17%;
+        top: -15px;
+      }
+    }
+  }
+
+  .main-container {
+    flex-direction: column !important;
+
+    div {
+      width: 100% !important;
+    }
+
+    form {
+      padding: 0 !important;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+}
